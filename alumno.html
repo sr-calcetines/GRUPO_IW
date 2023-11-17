@@ -9,41 +9,46 @@
 <body>
     <header>
         <h1>Gestión de Actividades Diarias</h1>
+        <div class="perfil">
+            <div class="perfil-avatar">
+                <img src="IMG/alumnos.png" alt="Tu Foto de Perfil">
+            </div>
+            <div class="perfil-options">
+                <ul>
+                    <li><a href="#">Opción 1</a></li>
+                    <li><a href="#">Opción 2</a></li>
+                </ul>
+            </div>
+        </div>
     </header>
 
-    <section class="practica-info">
-        <h2>Información de la Práctica</h2>
-        <p>Horas de práctica realizadas: [Insertar horas aquí]</p>
-        <p>Horas de práctica pendientes: [Insertar horas aquí]</p>
-    </section>
-
     <section class="actividades">
-        <h2>Listado de Actividades Diarias</h2>
+        <h2>Actividades Diarias</h2>
         <table>
             <tr>
+                <th>Tipo de Práctica</th>
                 <th>Fecha</th>
-                <th>Descripción</th>
-                <th>Horas</th>
-                <th>Acciones</th>
+                <th>Actividad Realizada</th>
+                <th>Total de Horas</th>
+                <th>Observaciones o Incidencias</th>
             </tr>
             <tr>
-                <td>01/10/2023</td>
-                <td>Diseño de Interfaces Web</td>
-                <td>8</td>
                 <td>
-                    <button class="editar">Editar</button>
-                    <button class="eliminar">Eliminar</button>
+                    <select>
+                        <option value="Dual">Dual</option>
+                        <option value="FCT">FCT</option>
+                    </select>
                 </td>
+                <td><input type="date"></td>
+                <td><input type="text"></td>
+                <td><input type="number"></td>
+                <td><textarea rows="2"></textarea></td>
             </tr>
+            <!-- Puedes agregar más filas con JavaScript o un lenguaje backend -->
         </table>
-
+    
         <button class="agregar">Agregar Actividad</button>
     </section>
 
-    <section class="informacion-adicional">
-        <h2>Información Adicional</h2>
-        <p>Empresa: [Nombre de la empresa]</p>
-        <p>Profesor Tutor: [Nombre del profesor tutor]</p>
-    </section>
 </body>
 </html>
