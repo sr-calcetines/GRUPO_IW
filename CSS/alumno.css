@@ -9,6 +9,7 @@ header {
     color: #ffc836;
     text-align: center;
     padding: 20px;
+    position: relative;
 }
 
 h1 {
@@ -79,13 +80,6 @@ th {
     background-color: #b3e473;
 }
 
-
-
-
-header {
-    position: relative;
-}
-
 .perfil {
     position: absolute;
     top: 50%;
@@ -140,3 +134,69 @@ header {
     text-decoration: underline;
     display: block;
 }
+
+.perfil:hover .perfil-options {
+    display: block;
+}
+
+/* Ajustes para el menú desplegable */
+.perfil-options {
+    position: absolute;
+    top: 100%; /* Ajusta la posición para que aparezca debajo del perfil */
+    right: 0;
+    display: none;
+    background-color: #002858;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1;
+    min-width: 100px;
+}
+
+.perfil-options a {
+    color: white;
+}
+
+.perfil-options a:hover{
+    text-decoration: none;
+}
+
+.logo-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px; /* Ajusta el espaciado según sea necesario */
+}
+
+.logo-container img {
+    width: 50px; /* Ajusta el tamaño según sea necesario */
+    height: auto; /* Para mantener la proporción de la imagen */
+}
+
+.bienvenida {
+    text-align: center;
+    margin: 50px auto; /* Ajusta el margen según sea necesario */
+    max-width: 600px; /* Ajusta el ancho máximo según sea necesario */
+}
+
+.bienvenida h2 {
+    color: #0074b7; /* Ajusta el color del texto según sea necesario */
+}
+
+.bienvenida p {
+    color: #333; /* Ajusta el color del texto según sea necesario */
+}
+
+.centered-image {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9; /* Asegura que esté sobre otros elementos */
+    opacity: 0.1; /* Ajusta la transparencia según sea necesario */
+}
+
+.centered-image img {
+    max-width: 100%; /* Ajusta el ancho máximo según sea necesario */
+    height: auto;
+}
+
