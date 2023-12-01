@@ -1,0 +1,203 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #002858;
+    color: #ffc836;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+h1 {
+    margin: 0;
+}
+
+.practica-info, .actividades, .informacion-adicional {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.agregar {
+    background-color: #0074b7;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.agregar:hover {
+    background-color: #00569b;
+}
+
+.eliminar {
+    background-color: #a7180e;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.editar {
+    background-color: #7dbe29;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+ .eliminar:hover {
+    background-color:  #cc3f34;
+}
+
+.editar:hover {
+    background-color: #b3e473;
+}
+
+.perfil {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+}
+
+.perfil-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.perfil-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.perfil-options {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    display: none;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+
+.perfil-options ul {
+    list-style: none;
+    padding: 0;
+}
+
+.perfil-options li {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.perfil a {
+    text-decoration: none;
+    color: #0074b7;
+}
+
+.perfil a:hover {
+    text-decoration: underline;
+    display: block;
+}
+
+.perfil:hover .perfil-options {
+    display: block;
+}
+
+/* Ajustes para el menú desplegable */
+.perfil-options {
+    position: absolute;
+    top: 100%; /* Ajusta la posición para que aparezca debajo del perfil */
+    right: 0;
+    display: none;
+    background-color: #002858;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1;
+    min-width: 100px;
+}
+
+.perfil-options a {
+    color: white;
+}
+
+.perfil-options a:hover{
+    text-decoration: none;
+}
+
+.logo-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px; /* Ajusta el espaciado según sea necesario */
+}
+
+.logo-container img {
+    width: 50px; /* Ajusta el tamaño según sea necesario */
+    height: auto; /* Para mantener la proporción de la imagen */
+}
+
+.bienvenida {
+    text-align: center;
+    margin: 50px auto; /* Ajusta el margen según sea necesario */
+    max-width: 600px; /* Ajusta el ancho máximo según sea necesario */
+}
+
+.bienvenida h2 {
+    color: #0074b7; /* Ajusta el color del texto según sea necesario */
+}
+
+.bienvenida p {
+    color: #333; /* Ajusta el color del texto según sea necesario */
+}
+
+.centered-image {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9; /* Asegura que esté sobre otros elementos */
+    opacity: 0.1; /* Ajusta la transparencia según sea necesario */
+    pointer-events: none;
+}
+
+.centered-image img {
+    max-width: 100%; /* Ajusta el ancho máximo según sea necesario */
+    height: auto;
+}
+

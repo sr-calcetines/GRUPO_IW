@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión Profesores</title>
+    <link rel="stylesheet" href="CSS/alumno.css">
+    <script src="JS/tablaAlumnos.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="IMG/logo-removebg-blanco.png" alt="Logotipo">
+        </div>
+        <h1>Gestión de Actividades en Prácticas</h1>
+        <div class="perfil">
+            <div class="perfil-avatar">
+                <img src="IMG/alumnos.png" alt="Tu Foto de Perfil">
+            </div>
+            <div class="perfil-options">
+                <ul>
+                    <li><a href="alumno.html">Inicio</a></li>
+                    <li><a href="perfilAlumno.html">Mi perfil</a></li>
+                    <li><a href="tablaAlumno.html">Tabla de actividades</a></li>
+                    <li><a href="login.html">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+        <h2>Tabla de Actividades Diarias</h2>
+        <table id="tablaAlmacenada">
+            <!-- Encabezados de la tabla -->
+            <tr>
+                <th>Tipo de Práctica</th>
+                <th>Fecha</th>
+                <th>Actividad Realizada</th>
+                <th>Total de Horas</th>
+                <th>Observaciones o Incidencias</th>
+            </tr>
+            <!-- Filas de la tabla almacenada se agregarán dinámicamente aquí -->
+        </table>
+
+    <div class="centered-image">
+        <img src="IMG/logo-removebg.png" alt="Logo con transparencia">
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Recupera la tabla almacenada en el almacenamiento local
+            var tablaAlmacenada = localStorage.getItem('tablaActividades');
+    
+            // Verifica si hay una tabla almacenada
+            if (tablaAlmacenada) {
+                // Crea un nuevo div para mostrar la tabla almacenada
+                var tablaAlmacenadaDiv = document.createElement('div');
+                tablaAlmacenadaDiv.innerHTML = tablaAlmacenada;
+    
+                // Agrega el div al cuerpo del documento
+                document.body.appendChild(tablaAlmacenadaDiv);
+            } else {
+                console.log('No hay datos de tabla almacenados.');
+            }
+        });
+        </script>
+</body>
+</html>
